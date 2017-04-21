@@ -21,7 +21,7 @@ Instalação
 Navegue até o diretório raíz da sua instalação do Magento 2 e siga os seguintes passos:
 
 1. Instale via packagist
-   - ```composer require setor7/magento2-cielo```
+   - ```composer require setor7soft/magento2-cielo```
        - Neste momento, podem ser solicitadas suas credenciais de autenticação do Magento. Caso tenha alguma dúvida, há uma descrição de como proceder nesse [link da documentação oficial](http://devdocs.magento.com/guides/v2.0/install-gde/prereq/connect-auth.html).
 2. Execute os comandos:
    - ```php bin/magento setup:upgrade```
@@ -35,7 +35,7 @@ Atualização
 É altamente recomendado que você tenha um ambiente de testes para validar alterações e atualizações antes de atualizar sua loja em produção. É recomendado também que seja feito um **backup** da sua loja e informações importantes antes de executar qualquer procedimento de atualização/instalação.
 
 A atualização do módulo do cielo é feita através do **composer** e pode ser feita de diversas maneiras, de acordo com suas preferências. Uma forma é através dos comandos:
-1. ```composer update setor7/magento2-cielo```
+1. ```composer update setor7soft/magento2-cielo```
 2. ```php bin/magento setup:upgrade```
 3. ```php bin/magento setup:static-content:deploy``` ou ```php bin/magento setup:static-content:deploy pt_BR```, de acordo com as configurações da sua loja.
 

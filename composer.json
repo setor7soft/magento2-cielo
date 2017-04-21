@@ -1,5 +1,5 @@
 {
-    "name": "setor7/magento2-cielo",
+    "name": "setor7soft/magento2-cielo",
     "description": "Solução para pagamentos da cielo no Magento 2",
     "require": {
         "php": "~5.5.0|~5.6.0|~7.0.0",
