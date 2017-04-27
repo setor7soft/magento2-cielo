@@ -10,7 +10,7 @@
     <!-- Payment Method Facade configuration -->
     <virtualType name="CieloFacade" type="Magento\Payment\Model\Method\Adapter">
         <arguments>
-            <argument name="code" xsi:type="const">\Setor7\Cielo\Model\Cielo::METHOD_CODE</argument>
+            <argument name="code" xsi:type="const">Setor7\Cielo\Model\Ui\ConfigProvider::CODE</argument>
             <argument name="formBlockType" xsi:type="string">Magento\Payment\Block\Form\Cc</argument>
             <argument name="infoBlockType" xsi:type="string">Setor7\Cielo\Block\Info</argument>
             <argument name="valueHandlerPool" xsi:type="object">CieloValueHandlerPool</argument>
@@ -22,7 +22,7 @@
     <!-- Configuration reader -->
     <type name="Setor7\Cielo\Gateway\Config\Config" >
         <arguments>
-            <argument name="methodCode" xsi:type="const">\Setor7\Cielo\Model\Cielo::METHOD_CODE</argument>
+            <argument name="methodCode" xsi:type="const">Setor7\Cielo\Model\Ui\ConfigProvider::CODE</argument>
         </arguments>
     </type>
 

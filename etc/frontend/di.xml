@@ -9,14 +9,14 @@
     <type name="Magento\Payment\Model\CcGenericConfigProvider">
         <arguments>
             <argument name="methodCodes" xsi:type="array">
-                <item name="cielo" xsi:type="const">Setor7\Cielo\Model\Cielo::METHOD_CODE</item>
+                <item name="cielo" xsi:type="const">Setor7\Cielo\Model\Ui\ConfigProvider::CODE</item>
             </argument>
         </arguments>
     </type>
     <type name="Magento\Checkout\Model\CompositeConfigProvider">
         <arguments>
             <argument name="configProviders" xsi:type="array">
-                <item name="cielo_config_provider" xsi:type="object">Setor7\Cielo\Model\Ui\CieloConfigProvider</item>
+                <item name="cielo_config_provider" xsi:type="object">Setor7\Cielo\Model\Ui\ConfigProvider</item>
             </argument>
         </arguments>
     </type>

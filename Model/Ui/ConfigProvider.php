@@ -15,7 +15,7 @@ use Magento\Framework\App\RequestInterface;
 /**
  * Class ConfigProvider
  */
-final class CieloConfigProvider implements ConfigProviderInterface
+final class ConfigProvider implements ConfigProviderInterface
 {
     const CODE = 'cielo';
 

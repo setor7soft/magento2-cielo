@@ -17,6 +17,7 @@
     "autoload": {
         "files": [ "registration.php" ],
         "psr-4": {
+          "Setor7\\Cielo\\": ""
         }
     }
 }
