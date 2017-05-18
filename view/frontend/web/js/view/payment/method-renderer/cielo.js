@@ -377,17 +377,56 @@ function (_, Component, creditCardData, cardNumberValidator, quote, $t, $, addit
                 return true;
             },
 
+            cleanValues: function () {
+              this.creditCardVerificationNumber('');
+              this.creditCardSsStartMonth('');
+              this.creditCardSsStartYear('');
+              this.creditCardSsIssue('');
+              this.creditCardType('');
+              this.creditCardExpYear('');
+              this.creditCardExpMonth('');
+              this.creditCardNumber('');
+              this.creditCardOwner('');
+              this.installment('');
+            },
+
             /**
              * @override
              */
-            placeOrder: function () {
-                if (additionalValidators.validate()) {
-                //if (true) {
-                  this._super();
-                } else {
-                  return false;
-                }
-            }
+             /**
+              * Place order.
+              */
+             placeOrder: function (data, event) {
+                 var self = this;
+
+                 if (event) {
+                     event.preventDefault();
+                 }
+
+                 if (this.validate() && additionalValidators.validate()) {
+                     this.isPlaceOrderActionAllowed(false);
+
+                     this.getPlaceOrderDeferredObject()
+                         .fail(
+                             function () {
+                                 self.isPlaceOrderActionAllowed(true);
+                                 self.cleanValues();
+                             }
+                         ).done(
+                             function () {
+                                 self.afterPlaceOrder();
+
+                                 if (self.redirectAfterPlaceOrder) {
+                                     redirectOnSuccessAction.execute();
+                                 }
+                             }
+                         );
+
+                     return true;
+                 }
+
+                 return false;
+             }
         });
     }
 );
