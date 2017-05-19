@@ -12,9 +12,10 @@ define([
       'Magento_Checkout/js/model/quote',
       'mage/translate',
       'jquery',
-      'Magento_Checkout/js/model/payment/additional-validators'
+      'Magento_Checkout/js/model/payment/additional-validators',
+      'Magento_Checkout/js/action/redirect-on-success'
   ],
-function (_, Component, creditCardData, cardNumberValidator, quote, $t, $, additionalValidators) {
+function (_, Component, creditCardData, cardNumberValidator, quote, $t, $, additionalValidators, redirectOnSuccessAction) {
         'use strict';
         return Component.extend({
             defaults: {
